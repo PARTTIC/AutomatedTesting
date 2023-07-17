@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230706 08:54:27.795" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenario Manage Tenant" source="D:\RobotFramework_Wolftail\executions\scenario_manage_tenant\scenario_manage_tenant.robot">
+<test id="s1-t1" name="Scenario_Manage_Tenant_Wolftail" line="6">
+<kw name="Given Open Chrome Browser Login Should Pass" library="user_login_page">
+<kw name="Open Browser" library="SeleniumELibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230706 08:54:28.179" level="INFO">Opening browser 'Chrome' to base url 'https://192.168.140.17:31151'.</msg>
+<msg timestamp="20230706 08:54:28.184" level="INFO">Executing: C:\Users\jakkrit.s\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230706 08:54:28.178" endtime="20230706 08:54:32.277"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumELibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230706 08:54:32.277" endtime="20230706 08:54:32.280"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:32.281" endtime="20230706 08:54:32.328"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:32.280" endtime="20230706 08:54:32.328"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:32.328" level="INFO">Clicking element 'xpath://button[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:32.328" endtime="20230706 08:54:32.382"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:32.328" endtime="20230706 08:54:32.382"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:32.383" endtime="20230706 08:54:32.410"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:32.383" endtime="20230706 08:54:32.410"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:32.411" level="INFO">Clicking element 'xpath://a[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:32.410" endtime="20230706 08:54:32.484"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:32.410" endtime="20230706 08:54:32.484"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:28.178" endtime="20230706 08:54:32.485"/>
+</kw>
+<kw name="When User Can Login With Account &quot;dev&quot; and Password &quot;P@ssw0rd&quot;" library="user_login_page" sourcename="User Can Login With Account &quot;${USERNAME}&quot; and Password &quot;${PASSWORD}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${USERNAME_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:32.487" endtime="20230706 08:54:34.729"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${USERNAME_INPUT}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:34.730" level="INFO">Typing text 'dev' into text field 'xpath://input[@name="username"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:34.729" endtime="20230706 08:54:34.853"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:34.854" level="INFO">Typing text 'P@ssw0rd' into text field 'xpath://input[@name="password"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:34.853" endtime="20230706 08:54:35.031"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:35.033" level="INFO">Clicking element 'xpath://button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:35.032" endtime="20230706 08:54:35.114"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:32.486" endtime="20230706 08:54:35.114"/>
+</kw>
+<kw name="Then User Should Found Wolftail Page" library="user_login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${WELCOME_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:35.115" endtime="20230706 08:54:39.949"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:35.115" endtime="20230706 08:54:39.949"/>
+</kw>
+<kw name="When User Goto Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:39.950" endtime="20230706 08:54:39.989"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:39.990" level="INFO">Clicking element 'xpath://button[@aria-label="Toggle primary navigation"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:39.989" endtime="20230706 08:54:40.125"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_TENANT_MANAGE_TXT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:40.125" endtime="20230706 08:54:40.387"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_TENANT_MANAGE_TXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:40.388" level="INFO">Clicking element 'xpath://span[@title="Tenant Management"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:40.388" endtime="20230706 08:54:40.479"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:39.949" endtime="20230706 08:54:40.479"/>
+</kw>
+<kw name="And User Can Verify Information On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_MANAGEMENT_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:40.481" endtime="20230706 08:54:40.539"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:40.480" endtime="20230706 08:54:40.540"/>
+</kw>
+<kw name="And User Can Create Tenant On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_MANAGEMENT_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:40.541" endtime="20230706 08:54:40.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_TENANT_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:40.564" level="INFO">Clicking element 'xpath://button[@aria-label="create tenant"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:40.563" endtime="20230706 08:54:40.693"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:40.540" endtime="20230706 08:54:40.693"/>
+</kw>
+<kw name="And User Can Verify TextFill On Create Tenant Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:40.695" endtime="20230706 08:54:40.780"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:54:43.782" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:54:40.780" endtime="20230706 08:54:43.782"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF_VRY}</arg>
+<arg>\</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:54:43.783" level="INFO">Verifying element 'xpath://input[@placeholder="Tenant ID"][@value='']' contains exact text ''.</msg>
+<status status="PASS" starttime="20230706 08:54:43.782" endtime="20230706 08:54:43.823"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF_VRY}</arg>
+<arg>\</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:54:43.825" level="INFO">Verifying element 'xpath://input[@placeholder="Tenant Name"][@value='']' contains exact text ''.</msg>
+<status status="PASS" starttime="20230706 08:54:43.823" endtime="20230706 08:54:43.852"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF_VRY}</arg>
+<arg>\</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:54:43.853" level="INFO">Verifying element 'xpath://input[@placeholder="Short Name"][@value=""]' contains exact text ''.</msg>
+<status status="PASS" starttime="20230706 08:54:43.852" endtime="20230706 08:54:43.884"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_VRY}</arg>
+<arg>\</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:54:43.885" level="INFO">Verifying element 'xpath://textarea[@placeholder="Description"][contains(.,"")]' contains exact text ''.</msg>
+<status status="PASS" starttime="20230706 08:54:43.884" endtime="20230706 08:54:43.912"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:40.694" endtime="20230706 08:54:43.912"/>
+</kw>
+<kw name="And User Can Input Information Tenant" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:43.913" endtime="20230706 08:54:43.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:43.937" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:43.936" endtime="20230706 08:54:44.005"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TENANTID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:44.007" level="INFO">Typing text '99' into text field 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:44.006" endtime="20230706 08:54:44.159"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:44.159" endtime="20230706 08:54:44.194"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:44.195" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:44.194" endtime="20230706 08:54:44.266"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TENANTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:44.267" level="INFO">Typing text 'TESTTEAM' into text field 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:44.266" endtime="20230706 08:54:44.467"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:44.468" endtime="20230706 08:54:44.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:44.548" level="INFO">Clicking element 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:44.548" endtime="20230706 08:54:44.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TENANTSHNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:44.616" level="INFO">Typing text 'TESTTEAM SHORT NAME TENANT' into text field 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:44.615" endtime="20230706 08:54:45.005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:45.005" endtime="20230706 08:54:45.064"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:45.065" level="INFO">Clicking element 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:45.065" endtime="20230706 08:54:45.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TENANTDESCTION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:45.142" level="INFO">Typing text 'TEST CREATE TENANT' into text field 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:45.141" endtime="20230706 08:54:45.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:54:48.400" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:54:45.399" endtime="20230706 08:54:48.400"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:48.400" endtime="20230706 08:54:48.422"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:48.423" level="INFO">Clicking element 'xpath://div[@class="euiText css-jp60ox-euiText-m-euiTextColor-customColor"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:48.422" endtime="20230706 08:54:48.495"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:54:51.496" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:54:48.495" endtime="20230706 08:54:51.496"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:43.913" endtime="20230706 08:54:51.496"/>
+</kw>
+<kw name="And User Can Delete Tenant After Create On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="User Can Create Tenant On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_MANAGEMENT_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:51.497" endtime="20230706 08:54:51.517"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_TENANT_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:51.517" level="INFO">Clicking element 'xpath://button[@aria-label="create tenant"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:51.517" endtime="20230706 08:54:51.577"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:51.497" endtime="20230706 08:54:51.577"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:54:54.577" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:54:51.577" endtime="20230706 08:54:54.577"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_id}</var>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230706 08:54:54.577" level="INFO">${random_id} = 2018</msg>
+<status status="PASS" starttime="20230706 08:54:54.577" endtime="20230706 08:54:54.577"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:54.577" endtime="20230706 08:54:54.595"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:54.596" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:54.596" endtime="20230706 08:54:54.639"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${random_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:54.639" level="INFO">Typing text '2018' into text field 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:54.639" endtime="20230706 08:54:54.745"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_name}</var>
+<arg>5-12</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230706 08:54:54.745" level="INFO">${random_name} = TD9jSj</msg>
+<status status="PASS" starttime="20230706 08:54:54.745" endtime="20230706 08:54:54.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:54.745" endtime="20230706 08:54:54.776"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:54.776" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:54.776" endtime="20230706 08:54:54.845"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${random_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:54.845" level="INFO">Typing text 'TD9jSj' into text field 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:54.845" endtime="20230706 08:54:55.024"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_short_name}</var>
+<arg>5-12</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230706 08:54:55.025" level="INFO">${random_short_name} = A7NGYUSdxS</msg>
+<status status="PASS" starttime="20230706 08:54:55.024" endtime="20230706 08:54:55.025"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:55.025" endtime="20230706 08:54:55.061"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:55.061" level="INFO">Clicking element 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:55.061" endtime="20230706 08:54:55.139"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${random_short_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:55.140" level="INFO">Typing text 'A7NGYUSdxS' into text field 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:55.139" endtime="20230706 08:54:55.334"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_descript}</var>
+<arg>999-1000</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230706 08:54:55.337" level="INFO">${random_descript} = mUcVgQkflGI22EgHuenY1js2ydRwFAPbtMdXtHGC7zAgh86psLgjyBu6ZVUl5w8ZaY1aUJ5oKwFBT9CqCUEZA9d8lMspTt1O8qYT23tNF1MLintGKV53h43CkLX3naQ9wCKpgbFMxGQyJLFCnKuSN8xXlf56UK5muSSMKfHO1oiqMAby6VZ5hftlgUf3zwgco4A3uRmk...</msg>
+<status status="PASS" starttime="20230706 08:54:55.335" endtime="20230706 08:54:55.337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:54:55.337" endtime="20230706 08:54:55.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:55.393" level="INFO">Clicking element 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:55.393" endtime="20230706 08:54:55.458"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${random_descript}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:54:55.459" level="INFO">Typing text 'mUcVgQkflGI22EgHuenY1js2ydRwFAPbtMdXtHGC7zAgh86psLgjyBu6ZVUl5w8ZaY1aUJ5oKwFBT9CqCUEZA9d8lMspTt1O8qYT23tNF1MLintGKV53h43CkLX3naQ9wCKpgbFMxGQyJLFCnKuSN8xXlf56UK5muSSMKfHO1oiqMAby6VZ5hftlgUf3zwgco4A3uRmkGPHroZCVSzIEgRZUPEctjpEf4CDQ66tlmai122UwAvsyF5sldrfMJfCDSkL1PVh2esw7Wk6fAV3bs1zL0uO67tZRHUuZrIaVKjfIl23dWXx91dPLRb7mjXpNbNGPVMJ0lmBtiV4kKCTbdU7mcGrzGCyMhinUFShbVw1uwQosFh3dI9i0Uacl4WXgaFnUk2uLY5ehSBWMuNXLoP6iXiUotrdlrfPmIJwkJmPvTw76WVMBXRF30QAoMn8Ta1z81wLQ73pUjIX89vo3wXbHibheKZNxSptcAdcPQnDrOK3pxOjfBu3ntUhPsEEcFwUXnM5l3l9Y0Af340q35MDIEnFD34aUg7EyoWiENj4QnCImAHxI0MBi9fosHbbOQwgX1M9cunXBzjy8jqVgYMDoxiJO0KPHkeQxzaAsgaSA8KnlruiTGxBtFWpIHG1zpZbhUeQVYzt8M7MpV4il1WQJNZmNiD8vAuCyF9tuYidxYw3CtpPMow5ASSf1KbQq4pRCrd8cNDDsZzY8MO1P0SQQg7OfZYoymjYCJpBpN39TmHQtK9NXFJYRbohQARj2qhNz9ruu9gnlUOrdGbkWcttaqwE5MEXzrSofbPtciFrMgbdr25VFeTDO3PYTq6kE3pAkQuBRbEvTjIJkVZFy3uSohqEL9dB9wNlBXZKwbR5rsizHpFIbZQseq8Ehne15NPOHwruHUC52zHPq4pobxweaizoLgfYZ1IkzXL98YEpdENs7wnPKZEbmHyBfdZb07Y5kCaMc10YZkcQ7njOs5BTfFVEdkIBjGSkpt8C' into text field 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:54:55.458" endtime="20230706 08:54:59.779"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:02.779" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:54:59.779" endtime="20230706 08:55:02.779"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:02.779" endtime="20230706 08:55:02.806"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:02.807" level="INFO">Clicking element 'xpath://div[@class="euiText css-jp60ox-euiText-m-euiTextColor-customColor"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:02.806" endtime="20230706 08:55:02.890"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:02.891" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20230706 08:55:02.891" endtime="20230706 08:55:02.891"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:05.893" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:02.892" endtime="20230706 08:55:05.893"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:05.932" level="INFO">${text} = RVConnex</msg>
+<status status="PASS" starttime="20230706 08:55:05.893" endtime="20230706 08:55:05.932"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:05.932" endtime="20230706 08:55:05.933"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${random_name}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.935" endtime="20230706 08:55:05.935"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${random_name} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.935" endtime="20230706 08:55:05.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.936" endtime="20230706 08:55:05.936"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.936" endtime="20230706 08:55:05.936"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>Delete Tenant</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.937" endtime="20230706 08:55:05.937"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.937" endtime="20230706 08:55:05.938"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.938" endtime="20230706 08:55:05.938"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:05.938" endtime="20230706 08:55:05.939"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:55:05.934" endtime="20230706 08:55:05.939"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:05.940" level="INFO">${i} = 1+1</msg>
+<status status="PASS" starttime="20230706 08:55:05.939" endtime="20230706 08:55:05.940"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:05.939" endtime="20230706 08:55:05.940"/>
+</branch>
+<status status="PASS" starttime="20230706 08:55:05.933" endtime="20230706 08:55:05.940"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${random_name}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230706 08:55:05.940" endtime="20230706 08:55:05.941"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:02.892" endtime="20230706 08:55:05.941"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:08.943" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:05.942" endtime="20230706 08:55:08.943"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:08.966" level="INFO">${text} = TESTTEAM</msg>
+<status status="PASS" starttime="20230706 08:55:08.943" endtime="20230706 08:55:08.966"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:08.966" endtime="20230706 08:55:08.966"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${random_name}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${random_name} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>Delete Tenant</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.967" endtime="20230706 08:55:08.967"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.968" endtime="20230706 08:55:08.968"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:08.968" endtime="20230706 08:55:08.968"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:55:08.966" endtime="20230706 08:55:08.968"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:08.968" level="INFO">${i} = 2+1</msg>
+<status status="PASS" starttime="20230706 08:55:08.968" endtime="20230706 08:55:08.968"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:08.968" endtime="20230706 08:55:08.968"/>
+</branch>
+<status status="PASS" starttime="20230706 08:55:08.966" endtime="20230706 08:55:08.968"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${random_name}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230706 08:55:08.968" endtime="20230706 08:55:08.969"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:05.941" endtime="20230706 08:55:08.969"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:11.970" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:08.969" endtime="20230706 08:55:11.970"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:11.990" level="INFO">${text} = TD9jSj</msg>
+<status status="PASS" starttime="20230706 08:55:11.970" endtime="20230706 08:55:11.990"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:11.991" endtime="20230706 08:55:11.991"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${random_name}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:11.991" endtime="20230706 08:55:12.012"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${random_name} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:12.012" endtime="20230706 08:55:12.012"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:12.013" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[3]/td[6]/div/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20230706 08:55:12.012" endtime="20230706 08:55:12.084"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:12.084" endtime="20230706 08:55:12.111"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${DIALOG_DELETE_TENANT_CNF_1}</arg>
+<arg>Delete Tenant</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:55:12.111" level="INFO">Verifying element 'xpath://div[@class="euiText css-d0w825-euiText-m"]//h3[text()[contains(.,"Delete Tenant")]]' contains exact text 'Delete Tenant'.</msg>
+<status status="PASS" starttime="20230706 08:55:12.111" endtime="20230706 08:55:12.128"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:12.128" endtime="20230706 08:55:12.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${DELETE_TENANT_CNF_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:12.153" level="INFO">Clicking element 'xpath://span[@class="css-1km4ln8-euiButtonDisplayContent"]//span[text()[contains(.,"Delete")]]'.</msg>
+<status status="PASS" starttime="20230706 08:55:12.152" endtime="20230706 08:55:12.205"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230706 08:55:12.205" endtime="20230706 08:55:13.126"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:11.991" endtime="20230706 08:55:13.126"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:13.127" endtime="20230706 08:55:13.127"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:55:13.127" endtime="20230706 08:55:13.127"/>
+</branch>
+<status status="PASS" starttime="20230706 08:55:11.991" endtime="20230706 08:55:13.127"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${random_name}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20230706 08:55:13.127" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230706 08:55:13.127" endtime="20230706 08:55:13.127"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:08.969" endtime="20230706 08:55:13.127"/>
+</iter>
+<status status="PASS" starttime="20230706 08:55:02.891" endtime="20230706 08:55:13.127"/>
+</for>
+<status status="PASS" starttime="20230706 08:54:51.497" endtime="20230706 08:55:13.128"/>
+</kw>
+<kw name="And User Can Verify Dialog Confirm Delete Tenant On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:16.129" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:13.129" endtime="20230706 08:55:16.129"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:13.129" endtime="20230706 08:55:16.129"/>
+</kw>
+<kw name="And User Can Verify Create Tenant Duplicate On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:19.131" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:16.130" endtime="20230706 08:55:19.131"/>
+</kw>
+<kw name="User Can Create Tenant On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_MANAGEMENT_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:19.131" endtime="20230706 08:55:19.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_TENANT_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.150" level="INFO">Clicking element 'xpath://button[@aria-label="create tenant"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.150" endtime="20230706 08:55:19.204"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:19.131" endtime="20230706 08:55:19.205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:19.205" endtime="20230706 08:55:19.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.226" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.226" endtime="20230706 08:55:19.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TENANTID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.302" level="INFO">Typing text '99' into text field 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.301" endtime="20230706 08:55:19.380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:19.380" endtime="20230706 08:55:19.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.403" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.403" endtime="20230706 08:55:19.547"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TENANTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.548" level="INFO">Typing text 'TESTTEAM' into text field 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.547" endtime="20230706 08:55:19.684"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:19.684" endtime="20230706 08:55:19.713"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.714" level="INFO">Clicking element 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.713" endtime="20230706 08:55:19.780"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TENANTSHNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:19.781" level="INFO">Typing text 'TESTTEAM SHORT NAME TENANT' into text field 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:19.780" endtime="20230706 08:55:20.130"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:20.130" endtime="20230706 08:55:20.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:20.193" level="INFO">Clicking element 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:20.192" endtime="20230706 08:55:20.259"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TENANTDESCTION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:20.260" level="INFO">Typing text 'TEST CREATE TENANT' into text field 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:20.259" endtime="20230706 08:55:20.582"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:23.582" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:20.582" endtime="20230706 08:55:23.582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:23.582" endtime="20230706 08:55:23.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:23.604" level="INFO">Clicking element 'xpath://div[@class="euiText css-jp60ox-euiText-m-euiTextColor-customColor"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:23.604" endtime="20230706 08:55:23.698"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:26.700" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:23.698" endtime="20230706 08:55:26.700"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:16.130" endtime="20230706 08:55:26.700"/>
+</kw>
+<kw name="And User Can Verify After Input Data Create Tenant Duplicated On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTID_DUPLICATED_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:26.701" endtime="20230706 08:55:26.725"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTID_DUPLICATED_TXA}</arg>
+<arg>Tenant ID has been Duplicated.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:55:26.726" level="INFO">Verifying element 'xpath://div[@aria-live="polite"][contains(.,"Tenant ID has been Duplicated.")]' contains exact text 'Tenant ID has been Duplicated.'.</msg>
+<status status="PASS" starttime="20230706 08:55:26.725" endtime="20230706 08:55:26.743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTNAME_DUPLICATED_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:26.743" endtime="20230706 08:55:26.766"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTNAME_DUPLICATED_TXA}</arg>
+<arg>Tenant Name has been Duplicated.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:55:26.767" level="INFO">Verifying element 'xpath://div[@aria-live="polite"][contains(.,"Tenant Name has been Duplicated.")]' contains exact text 'Tenant Name has been Duplicated.'.</msg>
+<status status="PASS" starttime="20230706 08:55:26.766" endtime="20230706 08:55:26.782"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTSHORT_DUPLICATED_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:26.782" endtime="20230706 08:55:26.805"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${VERIFY_TENANTSHORT_DUPLICATED_TXA}</arg>
+<arg>Short Name has been Duplicated.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 08:55:26.806" level="INFO">Verifying element 'xpath://div[@aria-live="polite"][contains(.,"Short Name has been Duplicated.")]' contains exact text 'Short Name has been Duplicated.'.</msg>
+<status status="PASS" starttime="20230706 08:55:26.805" endtime="20230706 08:55:26.824"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:31.824" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:26.824" endtime="20230706 08:55:31.824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${CLOSE_TENANT_CREATE_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:31.824" endtime="20230706 08:55:31.846"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CLOSE_TENANT_CREATE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:31.847" level="INFO">Clicking element 'xpath:/html/body/div[4]/div[2]/div/div[2]/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20230706 08:55:31.847" endtime="20230706 08:55:31.912"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:26.701" endtime="20230706 08:55:31.912"/>
+</kw>
+<kw name="And User Can Edit Data Tenant After Create On Tenant Management Page" library="user_manage_tenant_page">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:31.913" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20230706 08:55:31.913" endtime="20230706 08:55:31.913"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:34.914" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:31.914" endtime="20230706 08:55:34.914"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:34.932" level="INFO">${text} = RVConnex</msg>
+<status status="PASS" starttime="20230706 08:55:34.914" endtime="20230706 08:55:34.932"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:34.932" endtime="20230706 08:55:34.932"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${TENANTNAME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${TENANTNAME} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:34.933" level="INFO">${i} = 1+1</msg>
+<status status="PASS" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:34.933" endtime="20230706 08:55:34.933"/>
+</branch>
+<status status="PASS" starttime="20230706 08:55:34.932" endtime="20230706 08:55:34.933"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${TENANTNAME}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230706 08:55:34.934" endtime="20230706 08:55:34.934"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:31.914" endtime="20230706 08:55:34.934"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:37.934" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:34.934" endtime="20230706 08:55:37.934"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:37.952" level="INFO">${text} = TESTTEAM</msg>
+<status status="PASS" starttime="20230706 08:55:37.934" endtime="20230706 08:55:37.952"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:37.952" endtime="20230706 08:55:37.952"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${TENANTNAME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:37.953" endtime="20230706 08:55:37.973"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${TENANTNAME} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:55:37.974" endtime="20230706 08:55:37.974"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:37.974" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[2]/td[6]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230706 08:55:37.974" endtime="20230706 08:55:38.084"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:37.952" endtime="20230706 08:55:38.085"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230706 08:55:38.085" endtime="20230706 08:55:38.085"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:55:38.085" endtime="20230706 08:55:38.085"/>
+</branch>
+<status status="PASS" starttime="20230706 08:55:37.952" endtime="20230706 08:55:38.085"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${TENANTNAME}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20230706 08:55:38.085" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230706 08:55:38.085" endtime="20230706 08:55:38.085"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:34.934" endtime="20230706 08:55:38.085"/>
+</iter>
+<status status="PASS" starttime="20230706 08:55:31.913" endtime="20230706 08:55:38.085"/>
+</for>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:38.086" endtime="20230706 08:55:38.106"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:38.107" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:38.106" endtime="20230706 08:55:38.158"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:38.159" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 08:55:38.159" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 08:55:38.159" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 08:55:38.159" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 08:55:38.158" endtime="20230706 08:55:38.170"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:41.170" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:38.170" endtime="20230706 08:55:41.170"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:41.170" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 08:55:41.171" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 08:55:41.171" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 08:55:41.170" endtime="20230706 08:55:41.206"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_ID_TXF}</arg>
+<arg>${TENANTID_EDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:41.206" level="INFO">Typing text '888' into text field 'xpath://input[@placeholder="Tenant ID"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:41.206" endtime="20230706 08:55:41.291"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:41.291" endtime="20230706 08:55:41.319"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:41.319" level="INFO">Clicking element 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:41.319" endtime="20230706 08:55:41.373"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:41.374" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 08:55:41.374" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 08:55:41.374" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 08:55:41.374" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 08:55:41.373" endtime="20230706 08:55:41.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:44.388" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:41.387" endtime="20230706 08:55:44.388"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:44.389" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 08:55:44.389" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 08:55:44.389" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 08:55:44.388" endtime="20230706 08:55:44.423"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_NAME_TXF}</arg>
+<arg>${TENANTNAME_EDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:44.424" level="INFO">Typing text 'TENANT_NAME_AFTER_EDIT.' into text field 'xpath://input[@placeholder="Tenant Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:44.424" endtime="20230706 08:55:44.664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:44.664" endtime="20230706 08:55:44.736"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:44.737" level="INFO">Clicking element 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:44.737" endtime="20230706 08:55:44.803"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:44.804" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 08:55:44.804" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 08:55:44.804" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 08:55:44.804" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 08:55:44.804" endtime="20230706 08:55:44.813"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:47.813" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:44.813" endtime="20230706 08:55:47.813"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:47.813" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 08:55:47.813" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 08:55:47.813" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 08:55:47.813" endtime="20230706 08:55:47.849"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_SHORT_NAME_TXF}</arg>
+<arg>${TENANTSHNAME_EDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:47.850" level="INFO">Typing text 'TENANT_SHORT_NAME_AFTER_EDIT .' into text field 'xpath://input[@placeholder="Short Name"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:47.849" endtime="20230706 08:55:48.136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:48.136" endtime="20230706 08:55:48.208"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:48.209" level="INFO">Clicking element 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:48.208" endtime="20230706 08:55:48.261"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:48.261" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 08:55:48.261" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 08:55:48.261" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 08:55:48.261" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 08:55:48.261" endtime="20230706 08:55:48.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:51.270" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:48.269" endtime="20230706 08:55:51.270"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 08:55:51.270" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 08:55:51.270" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 08:55:51.270" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 08:55:51.270" endtime="20230706 08:55:51.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${TENANT_DESCRIPTION_TXF}</arg>
+<arg>${TENANTDESCTION_EDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:51.301" level="INFO">Typing text 'ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ ทดสอบ' into text field 'xpath://textarea[@placeholder="Description"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:51.301" endtime="20230706 08:55:52.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:55.194" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:52.193" endtime="20230706 08:55:55.194"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:55:55.194" endtime="20230706 08:55:55.212"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${CREATE_NEW_TENANT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:55:55.212" level="INFO">Clicking element 'xpath://div[@class="euiText css-jp60ox-euiText-m-euiTextColor-customColor"]'.</msg>
+<status status="PASS" starttime="20230706 08:55:55.212" endtime="20230706 08:55:55.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:55:58.280" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:55.279" endtime="20230706 08:55:58.280"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:55:58.280" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20230706 08:55:58.280" endtime="20230706 08:55:58.280"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:56:01.281" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:55:58.280" endtime="20230706 08:56:01.281"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:56:01.297" level="INFO">${text} = RVConnex</msg>
+<status status="PASS" starttime="20230706 08:56:01.281" endtime="20230706 08:56:01.297"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:56:01.297" endtime="20230706 08:56:01.297"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${TENANTNAME_EDIT}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230706 08:56:01.298" endtime="20230706 08:56:01.298"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${TENANTNAME_EDIT} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 08:56:01.298" endtime="20230706 08:56:01.298"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:56:01.297" endtime="20230706 08:56:01.298"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230706 08:56:01.298" level="INFO">${i} = 1+1</msg>
+<status status="PASS" starttime="20230706 08:56:01.298" endtime="20230706 08:56:01.298"/>
+</kw>
+<status status="PASS" starttime="20230706 08:56:01.298" endtime="20230706 08:56:01.298"/>
+</branch>
+<status status="PASS" starttime="20230706 08:56:01.297" endtime="20230706 08:56:01.298"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${TENANTNAME_EDIT}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230706 08:56:01.299" endtime="20230706 08:56:01.299"/>
+</kw>
+<status status="PASS" starttime="20230706 08:55:58.280" endtime="20230706 08:56:01.299"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:56:04.300" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 08:56:01.299" endtime="20230706 08:56:04.300"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${text}</var>
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 08:56:04.316" level="INFO">${text} = TENANT_NAME_AFTER_EDIT.</msg>
+<status status="PASS" starttime="20230706 08:56:04.300" endtime="20230706 08:56:04.316"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${text} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:56:04.316" endtime="20230706 08:56:04.317"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; == &quot;${TENANTNAME_EDIT}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/table/tbody/tr[${i}]/td[6]/div/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 08:56:04.317" endtime="20230706 08:56:04.334"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${TENANTNAME_EDIT} &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 08:56:04.334" endtime="20230706 08:56:04.334"/>
+</kw>
+<status status="PASS" starttime="20230706 08:56:04.317" endtime="20230706 08:56:04.334"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" library="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230706 08:56:04.334" endtime="20230706 08:56:04.334"/>
+</kw>
+<status status="NOT RUN" starttime="20230706 08:56:04.334" endtime="20230706 08:56:04.334"/>
+</branch>
+<status status="PASS" starttime="20230706 08:56:04.317" endtime="20230706 08:56:04.334"/>
+</if>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${text}" == "${TENANTNAME_EDIT}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20230706 08:56:04.335" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230706 08:56:04.335" endtime="20230706 08:56:04.335"/>
+</kw>
+<status status="PASS" starttime="20230706 08:56:01.299" endtime="20230706 08:56:04.335"/>
+</iter>
+<status status="PASS" starttime="20230706 08:55:58.280" endtime="20230706 08:56:04.335"/>
+</for>
+<status status="PASS" starttime="20230706 08:55:31.913" endtime="20230706 08:56:04.335"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:28.177" endtime="20230706 08:56:04.335"/>
+</test>
+<kw name="Sleep" library="BuiltIn" type="TEARDOWN">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 08:56:34.338" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20230706 08:56:04.337" endtime="20230706 08:56:34.338"/>
+</kw>
+<status status="PASS" starttime="20230706 08:54:27.797" endtime="20230706 08:56:34.338"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scenario Manage Tenant">Scenario Manage Tenant</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
