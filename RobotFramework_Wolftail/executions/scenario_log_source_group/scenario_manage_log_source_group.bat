@@ -1,0 +1,2 @@
+SET /A TIME=30000
+START CMD /K robot -T -l Log-Manage_Log_Source_Group -r Report-Manage_Log_Source_Group -d D:\RobotFramework_Wolftail\executions\scenario_log_source_group\report .\scenario_manage_log_source_group.robot

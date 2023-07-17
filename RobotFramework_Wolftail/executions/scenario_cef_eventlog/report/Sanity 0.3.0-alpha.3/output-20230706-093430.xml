@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230706 09:34:30.931" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenario Cef Eventlog" source="D:\RobotFramework_Wolftail\executions\scenario_cef_eventlog\scenario_cef_eventlog.robot">
+<test id="s1-t1" name="Scenario_CEF_Wolftail" line="6">
+<kw name="Given Open Chrome Browser Login Should Pass" library="user_login_page">
+<kw name="Open Browser" library="SeleniumELibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230706 09:34:31.227" level="INFO">Opening browser 'Chrome' to base url 'https://192.168.140.17:31151'.</msg>
+<msg timestamp="20230706 09:34:31.232" level="INFO">Executing: C:\Users\jakkrit.s\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230706 09:34:31.226" endtime="20230706 09:34:34.007"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumELibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230706 09:34:34.007" endtime="20230706 09:34:34.124"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:34.125" endtime="20230706 09:34:34.162"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:34.125" endtime="20230706 09:34:34.162"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADVANCED_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:34.163" level="INFO">Clicking element 'xpath://button[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:34.162" endtime="20230706 09:34:34.219"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:34.162" endtime="20230706 09:34:34.219"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:34.220" endtime="20230706 09:34:34.244"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:34.220" endtime="20230706 09:34:34.244"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${IP_LINK_TXF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:34.245" level="INFO">Clicking element 'xpath://a[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:34.244" endtime="20230706 09:34:34.312"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:34.244" endtime="20230706 09:34:34.312"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:31.226" endtime="20230706 09:34:34.312"/>
+</kw>
+<kw name="When User Can Login With Account &quot;dev&quot; and Password &quot;P@ssw0rd&quot;" library="user_login_page" sourcename="User Can Login With Account &quot;${USERNAME}&quot; and Password &quot;${PASSWORD}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${USERNAME_INPUT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:34.315" endtime="20230706 09:34:36.173"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${USERNAME_INPUT}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:36.174" level="INFO">Typing text 'dev' into text field 'xpath://input[@name="username"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:36.173" endtime="20230706 09:34:36.342"/>
+</kw>
+<kw name="Input Text" library="SeleniumELibrary">
+<arg>xpath:${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:36.343" level="INFO">Typing text 'P@ssw0rd' into text field 'xpath://input[@name="password"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:36.342" endtime="20230706 09:34:36.481"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:36.482" level="INFO">Clicking element 'xpath://button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:36.481" endtime="20230706 09:34:36.547"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:34.314" endtime="20230706 09:34:36.547"/>
+</kw>
+<kw name="Then User Should Found Wolftail Page" library="user_login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${WELCOME_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:36.548" endtime="20230706 09:34:42.879"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:36.548" endtime="20230706 09:34:42.879"/>
+</kw>
+<kw name="When User Goto Discover Page" library="user_discover_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:42.880" endtime="20230706 09:34:42.905"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:42.906" level="INFO">Clicking element 'xpath://button[@aria-label="Toggle primary navigation"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:42.906" endtime="20230706 09:34:43.048"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_DISCOVER_TXT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:43.048" endtime="20230706 09:34:43.352"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_DISCOVER_TXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:43.352" level="INFO">Clicking element 'xpath://span[@title="Discover"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:43.352" endtime="20230706 09:34:43.437"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:42.880" endtime="20230706 09:34:43.437"/>
+</kw>
+<kw name="And Select Index Data Type CEF EventLog" library="user_log_cef_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_INDEX_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:43.438" endtime="20230706 09:34:44.440"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_INDEX_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:44.441" level="INFO">Clicking element 'xpath://button[@data-test-subj="discover-dataView-switch-link"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:44.440" endtime="20230706 09:34:44.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${MENU_INDEX_CEF_EVENTLOG}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:44.745" endtime="20230706 09:34:44.807"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${MENU_INDEX_CEF_EVENTLOG}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:44.808" level="INFO">Clicking element 'xpath://span[text()[contains(.,"Logs-cef-rv-dats")]]'.</msg>
+<status status="PASS" starttime="20230706 09:34:44.807" endtime="20230706 09:34:44.915"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:43.438" endtime="20230706 09:34:44.915"/>
+</kw>
+<kw name="And User Can Select Filter Period Time" library="user_discover_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TIME_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:44.918" endtime="20230706 09:34:45.033"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TIME_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:45.034" level="INFO">Clicking element 'xpath://span[@class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:45.034" endtime="20230706 09:34:45.257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TODAY_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:45.257" endtime="20230706 09:34:45.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TODAY_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:45.324" level="INFO">Clicking element 'xpath://button[text()[contains(.,"Today")]]'.</msg>
+<status status="PASS" starttime="20230706 09:34:45.323" endtime="20230706 09:34:45.588"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:44.917" endtime="20230706 09:34:45.588"/>
+</kw>
+<kw name="And User Can Search On Filter Bar By Information EventLog CEF" library="user_log_cef_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TIME_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:45.590" endtime="20230706 09:34:45.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${FILTER_TIME_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:45.609" level="INFO">Clicking element 'xpath://span[@class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:45.608" endtime="20230706 09:34:45.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${FILTER_15MINUTES_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:45.745" endtime="20230706 09:34:45.993"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${FILTER_15MINUTES_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:45.993" level="INFO">Clicking element 'xpath://button[text()[contains(.,"Last 15 minutes")]]'.</msg>
+<status status="PASS" starttime="20230706 09:34:45.993" endtime="20230706 09:34:46.106"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:46.106" endtime="20230706 09:34:46.131"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:46.132" level="INFO">Clicking element 'xpath://div[@role="search"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:46.131" endtime="20230706 09:34:46.304"/>
+</kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{DATA_CEF_EVENTLOG#1}</value>
+<iter>
+<var name="${item}">Bitdefender</var>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:46.305" level="INFO">Clicking element 'xpath://div[@role="search"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:46.304" endtime="20230706 09:34:46.907"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${item}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:34:46.908" level="INFO">Sending key(s) ('Bitdefender',) to page.</msg>
+<msg timestamp="20230706 09:34:46.908" level="INFO">Sending keys Bitdefender</msg>
+<status status="PASS" starttime="20230706 09:34:46.907" endtime="20230706 09:34:47.288"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:34:50.290" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:34:47.289" endtime="20230706 09:34:50.290"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:34:50.290" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230706 09:34:50.290" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230706 09:34:50.290" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230706 09:34:50.290" endtime="20230706 09:34:50.551"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:34:53.552" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:34:50.552" endtime="20230706 09:34:53.552"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:34:53.552" endtime="20230706 09:34:53.574"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:53.552" endtime="20230706 09:34:53.574"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Element Text Should Be</arg>
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${amount_eventLog}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${amount_eventLog}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 09:34:53.575" level="INFO">Verifying element 'xpath://strong[@data-test-subj="unifiedHistogramQueryHits"]' contains exact text '5'.</msg>
+<status status="PASS" starttime="20230706 09:34:53.574" endtime="20230706 09:34:53.595"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:53.574" endtime="20230706 09:34:53.595"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:34:56.596" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:34:53.595" endtime="20230706 09:34:56.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:56.596" level="INFO">Clicking element 'xpath://div[@role="search"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:56.596" endtime="20230706 09:34:56.646"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:34:59.646" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:34:56.646" endtime="20230706 09:34:59.646"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:34:59.646" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:34:59.647" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:34:59.647" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:34:59.647" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:34:59.646" endtime="20230706 09:34:59.658"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:34:59.659" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:34:59.659" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:34:59.659" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:34:59.659" endtime="20230706 09:34:59.677"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:46.304" endtime="20230706 09:34:59.677"/>
+</iter>
+<iter>
+<var name="${item}">TROJAN_Zemot.CY</var>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:34:59.678" level="INFO">Clicking element 'xpath://div[@role="search"]'.</msg>
+<status status="PASS" starttime="20230706 09:34:59.677" endtime="20230706 09:34:59.720"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${item}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:34:59.721" level="INFO">Sending key(s) ('TROJAN_Zemot.CY',) to page.</msg>
+<msg timestamp="20230706 09:34:59.721" level="INFO">Sending keys TROJAN_Zemot.CY</msg>
+<status status="PASS" starttime="20230706 09:34:59.720" endtime="20230706 09:34:59.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:02.858" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:34:59.857" endtime="20230706 09:35:02.858"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:02.860" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20230706 09:35:02.860" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20230706 09:35:02.860" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230706 09:35:02.858" endtime="20230706 09:35:02.972"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:05.973" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:02.973" endtime="20230706 09:35:05.973"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:05.973" endtime="20230706 09:35:05.994"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:05.973" endtime="20230706 09:35:05.994"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Element Text Should Be</arg>
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${amount_eventLog}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${AMOUNT_EVENTLOG_CEF}</arg>
+<arg>${amount_eventLog}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 09:35:05.995" level="INFO">Verifying element 'xpath://strong[@data-test-subj="unifiedHistogramQueryHits"]' contains exact text '5'.</msg>
+<status status="PASS" starttime="20230706 09:35:05.994" endtime="20230706 09:35:06.011"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:05.994" endtime="20230706 09:35:06.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:09.011" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:06.011" endtime="20230706 09:35:09.011"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:09.013" level="INFO">Clicking element 'xpath://div[@role="search"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:09.012" endtime="20230706 09:35:09.060"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:12.060" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:09.060" endtime="20230706 09:35:12.060"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:12.063" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:35:12.063" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:35:12.063" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:35:12.063" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:35:12.061" endtime="20230706 09:35:12.089"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:12.091" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:35:12.091" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:35:12.091" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:35:12.089" endtime="20230706 09:35:12.113"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:59.677" endtime="20230706 09:35:12.113"/>
+</iter>
+<status status="PASS" starttime="20230706 09:34:46.304" endtime="20230706 09:35:12.113"/>
+</for>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${REFRESH_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:12.113" level="INFO">Clicking element 'xpath://button[@aria-label="Refresh query"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:12.113" endtime="20230706 09:35:12.208"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:45.589" endtime="20230706 09:35:12.208"/>
+</kw>
+<kw name="And User Should View Information Data EventLog By Click Button Expand EventLog CEF" library="user_log_cef_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${INFORMATION_EVENTLOG_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:12.209" endtime="20230706 09:35:12.275"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${INFORMATION_EVENTLOG_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:12.276" level="INFO">Clicking element 'xpath://button[@data-test-subj="docTableExpandToggleColumn"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:12.275" endtime="20230706 09:35:12.876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_EXP_DOC}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:12.876" endtime="20230706 09:35:13.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FILL_EXP_DOC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:13.233" level="INFO">Clicking element 'xpath://input[@class="euiFieldSearch euiFieldSearch--fullWidth"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:13.232" endtime="20230706 09:35:13.330"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${type_search_cef_information}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:13.330" level="INFO">Sending key(s) ('data_stream.dataset',) to page.</msg>
+<msg timestamp="20230706 09:35:13.330" level="INFO">Sending keys data_stream.dataset</msg>
+<status status="PASS" starttime="20230706 09:35:13.330" endtime="20230706 09:35:13.913"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Element Text Should Be</arg>
+<arg>xpath:${VALUE_FILL_TXA}</arg>
+<arg>${value_cef}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath:${VALUE_FILL_TXA}</arg>
+<arg>${value_cef}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 09:35:13.913" level="INFO">Verifying element 'xpath://div[@class="kbnDocViewer__value"]' contains exact text 'cef'.</msg>
+<status status="PASS" starttime="20230706 09:35:13.913" endtime="20230706 09:35:13.936"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:13.913" endtime="20230706 09:35:13.937"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:16.938" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:13.937" endtime="20230706 09:35:16.938"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:16.939" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20230706 09:35:16.939" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20230706 09:35:16.939" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20230706 09:35:16.938" endtime="20230706 09:35:17.106"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${REFRESH_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:17.107" level="INFO">Clicking element 'xpath://button[@aria-label="Refresh query"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:17.106" endtime="20230706 09:35:17.160"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:12.209" endtime="20230706 09:35:17.160"/>
+</kw>
+<kw name="And User Can Search Data EventLog On Search Field Names" library="user_log_cef_page">
+<for flavor="IN">
+<var>${data}</var>
+<value>@{event.code_fillter}</value>
+<iter>
+<var name="${data}">event.code</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:17.162" endtime="20230706 09:35:17.223"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:17.223" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:17.223" endtime="20230706 09:35:17.352"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${data}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:17.353" level="INFO">Sending key(s) ('event.code',) to page.</msg>
+<msg timestamp="20230706 09:35:17.353" level="INFO">Sending keys event.code</msg>
+<status status="PASS" starttime="20230706 09:35:17.352" endtime="20230706 09:35:17.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath://mark[text()[contains(.,"${data}")]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:17.827" level="INFO">Clicking element 'xpath://mark[text()[contains(.,"event.code")]]'.</msg>
+<status status="PASS" starttime="20230706 09:35:17.826" endtime="20230706 09:35:18.008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:18.008" endtime="20230706 09:35:18.043"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:18.044" level="INFO">Clicking element 'xpath://button[@aria-label="Add field as column"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:18.043" endtime="20230706 09:35:18.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:23.212" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:18.212" endtime="20230706 09:35:23.212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:23.212" endtime="20230706 09:35:23.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:23.231" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:23.231" endtime="20230706 09:35:23.275"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:23.276" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:35:23.276" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:35:23.276" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:35:23.276" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:35:23.275" endtime="20230706 09:35:23.289"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:23.290" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:35:23.290" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:35:23.290" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:35:23.290" endtime="20230706 09:35:23.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:26.400" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:23.398" endtime="20230706 09:35:26.400"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:17.162" endtime="20230706 09:35:26.400"/>
+</iter>
+<iter>
+<var name="${data}">data_stream.dataset</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:26.400" endtime="20230706 09:35:26.421"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:26.421" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:26.421" endtime="20230706 09:35:26.458"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${data}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:26.459" level="INFO">Sending key(s) ('data_stream.dataset',) to page.</msg>
+<msg timestamp="20230706 09:35:26.459" level="INFO">Sending keys data_stream.dataset</msg>
+<status status="PASS" starttime="20230706 09:35:26.458" endtime="20230706 09:35:26.733"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath://mark[text()[contains(.,"${data}")]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:26.734" level="INFO">Clicking element 'xpath://mark[text()[contains(.,"data_stream.dataset")]]'.</msg>
+<status status="PASS" starttime="20230706 09:35:26.733" endtime="20230706 09:35:26.812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:26.812" endtime="20230706 09:35:26.834"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:26.835" level="INFO">Clicking element 'xpath://button[@aria-label="Add field as column"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:26.834" endtime="20230706 09:35:26.981"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:31.982" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:26.981" endtime="20230706 09:35:31.982"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:31.983" endtime="20230706 09:35:32.016"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:32.016" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:32.016" endtime="20230706 09:35:32.059"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:32.059" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:35:32.059" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:35:32.059" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:35:32.060" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:35:32.059" endtime="20230706 09:35:32.073"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:32.074" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:35:32.074" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:35:32.074" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:35:32.073" endtime="20230706 09:35:32.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:35.188" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:32.187" endtime="20230706 09:35:35.188"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:26.400" endtime="20230706 09:35:35.188"/>
+</iter>
+<iter>
+<var name="${data}">event.original</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:35.189" endtime="20230706 09:35:35.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:35.221" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:35.221" endtime="20230706 09:35:35.258"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${data}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:35.259" level="INFO">Sending key(s) ('event.original',) to page.</msg>
+<msg timestamp="20230706 09:35:35.259" level="INFO">Sending keys event.original</msg>
+<status status="PASS" starttime="20230706 09:35:35.258" endtime="20230706 09:35:35.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath://mark[text()[contains(.,"${data}")]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:35.537" level="INFO">Clicking element 'xpath://mark[text()[contains(.,"event.original")]]'.</msg>
+<status status="PASS" starttime="20230706 09:35:35.537" endtime="20230706 09:35:35.613"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:35.614" endtime="20230706 09:35:35.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:35.635" level="INFO">Clicking element 'xpath://button[@aria-label="Add field as column"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:35.635" endtime="20230706 09:35:35.824"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:40.825" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:35.824" endtime="20230706 09:35:40.825"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:40.825" endtime="20230706 09:35:40.845"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:40.845" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:40.845" endtime="20230706 09:35:40.888"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:40.889" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:35:40.889" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:35:40.889" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:35:40.889" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:35:40.888" endtime="20230706 09:35:40.903"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:40.904" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:35:40.904" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:35:40.904" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:35:40.904" endtime="20230706 09:35:41.030"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:44.031" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:41.030" endtime="20230706 09:35:44.031"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:35.189" endtime="20230706 09:35:44.031"/>
+</iter>
+<iter>
+<var name="${data}">tags</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:44.032" endtime="20230706 09:35:44.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:44.084" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:44.083" endtime="20230706 09:35:44.123"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>${data}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:44.124" level="INFO">Sending key(s) ('tags',) to page.</msg>
+<msg timestamp="20230706 09:35:44.124" level="INFO">Sending keys tags</msg>
+<status status="PASS" starttime="20230706 09:35:44.123" endtime="20230706 09:35:44.240"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath://mark[text()[contains(.,"${data}")]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:44.241" level="INFO">Clicking element 'xpath://mark[text()[contains(.,"tags")]]'.</msg>
+<status status="PASS" starttime="20230706 09:35:44.240" endtime="20230706 09:35:44.351"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:44.351" endtime="20230706 09:35:44.374"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${ADD_FILTER_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:44.374" level="INFO">Clicking element 'xpath://button[@aria-label="Add field as column"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:44.374" endtime="20230706 09:35:44.545"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:49.545" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:44.545" endtime="20230706 09:35:49.545"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:35:49.545" endtime="20230706 09:35:49.564"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SEARCH_FIELD_NAMES_BAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:35:49.564" level="INFO">Clicking element 'xpath://input[@placeholder="Search field names"]'.</msg>
+<status status="PASS" starttime="20230706 09:35:49.564" endtime="20230706 09:35:49.607"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:49.608" level="INFO">Sending key(s) ('CTRL+a',) to page.</msg>
+<msg timestamp="20230706 09:35:49.608" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230706 09:35:49.608" level="INFO">Sending key a</msg>
+<msg timestamp="20230706 09:35:49.608" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230706 09:35:49.607" endtime="20230706 09:35:49.620"/>
+</kw>
+<kw name="Press Keys" library="SeleniumELibrary">
+<arg>None</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230706 09:35:49.621" level="INFO">Sending key(s) ('BACKSPACE',) to page.</msg>
+<msg timestamp="20230706 09:35:49.621" level="INFO">Pressing special key BACKSPACE to browser.</msg>
+<msg timestamp="20230706 09:35:49.621" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230706 09:35:49.620" endtime="20230706 09:35:49.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:52.735" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:49.735" endtime="20230706 09:35:52.735"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:44.032" endtime="20230706 09:35:52.735"/>
+</iter>
+<status status="PASS" starttime="20230706 09:35:17.162" endtime="20230706 09:35:52.735"/>
+</for>
+<status status="PASS" starttime="20230706 09:35:17.161" endtime="20230706 09:35:52.736"/>
+</kw>
+<kw name="And User Can Verify DataSteam.Dataset On Field Grid View CEF" library="user_log_cef_page">
+<for flavor="IN">
+<var>${data}</var>
+<value>@{datasteam_cef_vrf}</value>
+<iter>
+<var name="${data}">cef</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Element Text Should Be</arg>
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"${data}")]]</arg>
+<arg>${data}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"${data}")]]</arg>
+<arg>${data}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 09:35:52.743" level="INFO">Verifying element 'xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"cef")]]' contains exact text 'cef'.</msg>
+<status status="PASS" starttime="20230706 09:35:52.741" endtime="20230706 09:35:52.795"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:52.740" endtime="20230706 09:35:52.795"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:55.795" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:52.795" endtime="20230706 09:35:55.795"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:52.740" endtime="20230706 09:35:55.795"/>
+</iter>
+<status status="PASS" starttime="20230706 09:35:52.739" endtime="20230706 09:35:55.795"/>
+</for>
+<status status="PASS" starttime="20230706 09:35:52.738" endtime="20230706 09:35:55.796"/>
+</kw>
+<kw name="And User Can Verify Tags On Field Grid View CEF" library="user_log_cef_page">
+<for flavor="IN">
+<var>${data}</var>
+<value>@{eventtags_cef_vrf}</value>
+<iter>
+<var name="${data}">decoded</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Element Text Should Be</arg>
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"${data}")]]</arg>
+<arg>${data}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumELibrary">
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"${data}")]]</arg>
+<arg>${data}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230706 09:35:55.804" level="INFO">Verifying element 'xpath://span[@class="dscDiscoverGrid__cellValue"][text()[contains(.,"decoded")]]' contains exact text 'decoded'.</msg>
+<status status="PASS" starttime="20230706 09:35:55.801" endtime="20230706 09:35:55.849"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:55.800" endtime="20230706 09:35:55.849"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:35:58.849" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:55.849" endtime="20230706 09:35:58.849"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:55.800" endtime="20230706 09:35:58.849"/>
+</iter>
+<status status="PASS" starttime="20230706 09:35:55.799" endtime="20230706 09:35:58.849"/>
+</for>
+<status status="PASS" starttime="20230706 09:35:55.798" endtime="20230706 09:35:58.849"/>
+</kw>
+<kw name="Then User Can Verify Sort Time Data On Field Grid View" library="user_log_leef_page">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:36:01.850" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230706 09:35:58.850" endtime="20230706 09:36:01.850"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${timestamp}</var>
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:01.878" level="INFO">${timestamp} = Jul 6, 2023 @ 09:33:26.037</msg>
+<status status="PASS" starttime="20230706 09:36:01.850" endtime="20230706 09:36:01.878"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${timestamp} &lt;&lt;&lt; Timestamp Befor Sort</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 09:36:01.878" endtime="20230706 09:36:01.879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TIMESTAM_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:36:01.879" endtime="20230706 09:36:01.900"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TIMESTAM_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:01.900" level="INFO">Clicking element 'xpath://span[@class="euiToolTipAnchor css-jcaat8-euiToolTipAnchor-inlineBlock"][text()[contains(.,"@timestamp")]]'.</msg>
+<status status="PASS" starttime="20230706 09:36:01.900" endtime="20230706 09:36:02.079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SORT_OLD-NEW}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:36:02.079" endtime="20230706 09:36:02.146"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SORT_OLD-NEW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:02.146" level="INFO">Clicking element 'xpath://span[@class="euiListGroupItem__label css-nlq75h-euiListGroupItem__label-truncate"][text()[contains(.,"Old-New")]]'.</msg>
+<status status="PASS" starttime="20230706 09:36:02.146" endtime="20230706 09:36:02.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:36:07.420" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:36:02.420" endtime="20230706 09:36:07.420"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${timestamp}</var>
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:07.445" level="INFO">${timestamp} = Jul 6, 2023 @ 09:33:16.038</msg>
+<status status="PASS" starttime="20230706 09:36:07.420" endtime="20230706 09:36:07.445"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${timestamp} &lt;&lt;&lt; Timestamp After Sort OLD-NEW</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 09:36:07.445" endtime="20230706 09:36:07.445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${TIMESTAM_TXA}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:36:07.446" endtime="20230706 09:36:07.465"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${TIMESTAM_TXA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:07.465" level="INFO">Clicking element 'xpath://span[@class="euiToolTipAnchor css-jcaat8-euiToolTipAnchor-inlineBlock"][text()[contains(.,"@timestamp")]]'.</msg>
+<status status="PASS" starttime="20230706 09:36:07.465" endtime="20230706 09:36:07.555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumELibrary">
+<arg>xpath:${SORT_NEW-OLD}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230706 09:36:07.555" endtime="20230706 09:36:07.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumELibrary">
+<arg>xpath:${SORT_NEW-OLD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:07.580" level="INFO">Clicking element 'xpath://span[@class="euiListGroupItem__label css-nlq75h-euiListGroupItem__label-truncate"][text()[contains(.,"New-Old")]]'.</msg>
+<status status="PASS" starttime="20230706 09:36:07.579" endtime="20230706 09:36:07.768"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:36:12.769" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230706 09:36:07.768" endtime="20230706 09:36:12.769"/>
+</kw>
+<kw name="Get Text" library="SeleniumELibrary">
+<var>${timestamp}</var>
+<arg>xpath://span[@class="dscDiscoverGrid__cellValue"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230706 09:36:12.811" level="INFO">${timestamp} = Jul 6, 2023 @ 09:33:26.037</msg>
+<status status="PASS" starttime="20230706 09:36:12.769" endtime="20230706 09:36:12.811"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}${timestamp} &lt;&lt;&lt; Timestamp After Revert Sort NEW-OLD</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 09:36:12.811" endtime="20230706 09:36:12.812"/>
+</kw>
+<status status="PASS" starttime="20230706 09:35:58.850" endtime="20230706 09:36:12.812"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:31.225" endtime="20230706 09:36:12.813"/>
+</test>
+<kw name="Sleep" library="BuiltIn" type="TEARDOWN">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230706 09:36:22.816" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230706 09:36:12.815" endtime="20230706 09:36:22.816"/>
+</kw>
+<status status="PASS" starttime="20230706 09:34:30.933" endtime="20230706 09:36:22.816"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scenario Cef Eventlog">Scenario Cef Eventlog</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
